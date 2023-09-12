@@ -10,19 +10,21 @@ namespace ST10047403_PROG6212_POE_Class_Library
     {
         private string moduleCode;
         private string moduleName;
+        private int moduleLength;
         private string lecturerName;
         private int moduleCredits;
         private int moduleClassHours;
         private double moduleSelfStudyHours;
 
-        public Module(string moduleCode, string moduleName, string lecturerName, int moduleCredits, int moduleClassHours, double moduleSelfStudyHours)
+        public Module(string moduleCode, string moduleName, string lecturerName, int moduleCredits, int moduleClassHours, int moduleLength)
         {
             this.ModuleCode = moduleCode;
             this.ModuleName = moduleName;
             this.LecturerName = lecturerName;
             this.ModuleCredits = moduleCredits;
             this.ModuleClassHours = moduleClassHours;
-            this.ModuleSelfStudyHours = moduleSelfStudyHours;
+            this.moduleLength = moduleLength;
+            this.ModuleSelfStudyHours = selfStudyHours();
         }
 
         public string ModuleCode { get => moduleCode; set => moduleCode = value; }
@@ -31,5 +33,15 @@ namespace ST10047403_PROG6212_POE_Class_Library
         public int ModuleCredits { get => moduleCredits; set => moduleCredits = value; }
         public int ModuleClassHours { get => moduleClassHours; set => moduleClassHours = value; }
         public double ModuleSelfStudyHours { get => moduleSelfStudyHours; set => moduleSelfStudyHours = value; }
+
+        public double selfStudyHours()
+        {
+            return ((moduleCredits * 10) / moduleLength) - moduleClassHours;
+        }
+
+        public void resetSelfStudyHours()
+        {
+            this.ModuleSelfStudyHours = selfStudyHours();
+        }
     }
 }
