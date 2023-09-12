@@ -28,5 +28,6 @@ namespace ST10047403_PROG6212_POE_Class_Library
         public string SessionNotes { get => sessionNotes; set => sessionNotes = value; }
         public DateTime SessionDate { get => sessionDate; set => sessionDate = value; }
         public double SessionMinutes { get => sessionMinutes; set => sessionMinutes = value; }
+
     }
 }
