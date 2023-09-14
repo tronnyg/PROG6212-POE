@@ -4,8 +4,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1"
+        xmlns:viewModel="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Core"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="880" Width="1720">
+
+    <ContentControl.DataContext>
+        <viewModel:MainViewModel/>
+    </ContentControl.DataContext>
+    
+    <Grid Background="WhiteSmoke" Margin="0 0 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="80" />
+            <!-- Header/Navigation Bar -->
+            <RowDefinition Height="*" />
+            <!-- Content -->
+        </Grid.RowDefinitions>
+
+        <!-- Header/Navigation Bar -->
+        <Grid Background="LightGray" Margin="0 0 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Button Content="HOME" Grid.Column="0" Command="{Binding SwitchToAddModulesCommand}" Style="{StaticResource HeaderButtonStyle}" />
+            <Button Content="MODULES" Grid.Column="1" Command="{Binding SwitchToModulesCommand}" Style="{StaticResource HeaderButtonStyle}" />
+            <Button Content="SESSIONS" Grid.Column="2" Command="{Binding SwitchToSessionsCommand}" Style="{StaticResource HeaderButtonStyle}" />
+            <Button Content="EVENTS" Grid.Column="3" Command="{Binding SwitchToEventsCommand}" Style="{StaticResource HeaderButtonStyle}" />
+            <Button Content="PEOFILE" Grid.Column="4" Command="{Binding SwitchToProfileCommand}" Style="{StaticResource HeaderButtonStyle}" />
+        </Grid>
+
+        <!-- Content Display Area -->
+        <ContentControl Content="{Binding CurrentView}" Margin="0,0,0,0" Grid.Row="1" />
     </Grid>
 </Window>

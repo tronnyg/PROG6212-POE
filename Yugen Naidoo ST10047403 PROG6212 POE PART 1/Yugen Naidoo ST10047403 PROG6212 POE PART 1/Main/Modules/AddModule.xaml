@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Modules.AddModule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Modules"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1600">
+
+    <Grid Margin="40">
+
+        <TextBlock Text="ADD NEW MODULE" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 550"/>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="458" Width="400">
+            <StackPanel Orientation="Vertical" Margin="0,20">
+                <TextBox x:Name="ModuleCodeTextBox" Style="{StaticResource PlaceholderTextBoxStyle}" Tag="Module Code" Width="400" FontSize="20" />
+                <TextBlock x:Name="ModuleCodeErrorLabel" Foreground="Red" Visibility="Collapsed" FontSize="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,20">
+                <TextBox x:Name="ModuleNameTextBox" Style="{StaticResource PlaceholderTextBoxStyle}" Tag="Module Name" Width="400" FontSize="20"/>
+                <TextBlock x:Name="ModuleNameErrorLabel" Foreground="Red" Visibility="Collapsed" FontSize="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,20">
+                <TextBox x:Name="CreditsTextBox" Style="{StaticResource PlaceholderTextBoxStyle}" Tag="Number of Credits" Width="400" FontSize="20"/>
+                <TextBlock x:Name="CreditsErrorLabel" Foreground="Red" Visibility="Collapsed" FontSize="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,20">
+                <TextBox x:Name="ClassHoursTextBox" Style="{StaticResource PlaceholderTextBoxStyle}" Tag="Class Hours per Week" Width="400" FontSize="20"/>
+                <TextBlock x:Name="ClassHoursErrorLabel" Foreground="Red" Visibility="Collapsed" FontSize="20"/>
+            </StackPanel>
+
+            <Button x:Name="FinishButton" Content="Finish" Click="FinishButton_Click" HorizontalAlignment="Center" Width="272" FontSize="20" Margin="0,40,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
