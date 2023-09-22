@@ -28,6 +28,14 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Sessions
             
         }
 
+        internal MainViewModel MainViewModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void AddSessionButton_Click(object sender, RoutedEventArgs e)
         {
             

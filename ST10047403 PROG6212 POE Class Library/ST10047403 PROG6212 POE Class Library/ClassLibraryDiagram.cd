@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ST10047403_PROG6212_POE_Class_Library.Updates">
+    <Position X="8.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAEAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataMng\Updates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10047403_PROG6212_POE_Class_Library.Event">
+    <Position X="11.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAQAAAAEIIAAACCAAEAAAABAAgA=</HashCode>
+      <FileName>Objects\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10047403_PROG6212_POE_Class_Library.Module">
+    <Position X="5.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAgkgAAgAAABAAAAAAAgUCAgAAAIAgCAACAAUCAIAA=</HashCode>
+      <FileName>Objects\Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10047403_PROG6212_POE_Class_Library.Session">
+    <Position X="3" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAJAgAAAQAAAAAAAAAAAAIAAAACAAAAAAAABAAACAYA=</HashCode>
+      <FileName>Objects\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10047403_PROG6212_POE_Class_Library.Student">
+    <Position X="0.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIABAAAAAAAICAAADAgAAAQAgAAAAIAAAAAAAACAAQ=</HashCode>
+      <FileName>Objects\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10047403_PROG6212_POE_Class_Library.Objects.User" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAEAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>Objects\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

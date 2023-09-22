@@ -39,6 +39,14 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Sessions
 
         }
 
+        internal MainViewModel MainViewModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentUser.currentUser.Sessions1.Add(new Session(sessionName,sessionModule,"",sessionDate.Value,sessionMinutes.Value,Updates.CalculateWeekOfSemester(CurrentUser.semesterStartDate,CurrentUser.numWeeks,sessionDate.Value)));

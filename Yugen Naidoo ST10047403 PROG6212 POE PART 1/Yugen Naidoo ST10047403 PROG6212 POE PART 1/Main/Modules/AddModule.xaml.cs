@@ -36,6 +36,14 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Modules
             InitializeComponent();
         }
 
+        internal MainViewModel MainViewModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentUser.currentUser.Modules1.Add(new Module(moduleCode,moduleName,lecturerName,int.Parse(moduleCredits),int.Parse(moduleClassHours),CurrentUser.numWeeks));

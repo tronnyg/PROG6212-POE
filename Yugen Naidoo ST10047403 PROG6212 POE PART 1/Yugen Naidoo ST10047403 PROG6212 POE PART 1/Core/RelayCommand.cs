@@ -27,6 +27,14 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Core
             _canExecute = canExecute;
         }
 
+        internal MainViewModel MainViewModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         // Determines if the command can be executed
         public bool CanExecute(object parameter)
         {
