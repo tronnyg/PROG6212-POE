@@ -33,7 +33,7 @@
                 <TextBlock x:Name="SessionMinutesErrorLabel" Foreground="Red" Visibility="Collapsed" FontSize="20" Margin="0 10 0 0" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <Button x:Name="FinishButton" Content="Finish" Click="FinishButton_Click" HorizontalAlignment="Center" Width="272" FontSize="20" Margin="0,40,0,0" Command="{Binding SwitchToAddSessionsCommand}"/>
+            <Button x:Name="FinishButton" Content="Finish" Click="FinishButton_Click" HorizontalAlignment="Center" Width="272" FontSize="20" Margin="0,40,0,0" Command="{Binding SwitchToSessionsCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>

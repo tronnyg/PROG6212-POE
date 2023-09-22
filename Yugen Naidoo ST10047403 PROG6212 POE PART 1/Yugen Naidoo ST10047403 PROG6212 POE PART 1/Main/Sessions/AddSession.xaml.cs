@@ -67,7 +67,7 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Sessions
                 SessionDateErrorLabel.Visibility = Visibility.Visible;
                 sessionDate = null;
             }
-            else if (SessionDatePicker.SelectedDate < CurrentUser.semesterEndDate)
+            else if (SessionDatePicker.SelectedDate > CurrentUser.semesterEndDate)
             {
                 SessionDateErrorLabel.Text = "Date cannot be after semester ends";
                 SessionDateErrorLabel.Visibility = Visibility.Visible;
