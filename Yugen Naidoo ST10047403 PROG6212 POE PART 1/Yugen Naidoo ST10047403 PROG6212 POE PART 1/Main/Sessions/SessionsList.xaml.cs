@@ -25,6 +25,18 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Sessions
         public SessionsList()
         {
             InitializeComponent();
+            
+        }
+
+        private void AddSessionButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            SessionsListDatagrid.ItemsSource = null;
+            SessionsListDatagrid.ItemsSource = CurrentUser.currentUser.Sessions1;
         }
     }
 }

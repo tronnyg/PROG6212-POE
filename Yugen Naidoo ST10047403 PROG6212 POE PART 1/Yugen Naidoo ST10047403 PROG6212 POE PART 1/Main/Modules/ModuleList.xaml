@@ -3,10 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Modules"
+             xmlns:local="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Modules" xmlns:core="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Core" d:DataContext="{d:DesignInstance Type=core:MainViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="AddModuleButton" Content="ADD MODULE" Click="AddModuleButton_Click" HorizontalAlignment="Right" Width="150" Height="30" FontSize="20" Margin="0,10,10,0" Command="{Binding SwitchToAddModulesCommand}"/>
+        <ComboBox x:Name="SemesterWeeksComboBox" Width="150" Height="30" Margin="0 10 180 0" HorizontalAlignment="Right" SelectionChanged="SemesterWeeksComboBox_SelectionChanged"/>
 
         <DataGrid x:Name="ModuleListDatagrid" SelectionMode="Extended" SelectionUnit="FullRow" AutoGenerateColumns="False" Margin="10 0 10 0" Style="{StaticResource DataGridStyle1}">
             <DataGrid.CellStyle>
@@ -23,10 +29,10 @@
 
                 <!-- Module Code -->
                 <DataGridTextColumn x:Name="moduleCode" Header="Code" IsReadOnly="True" Width="*" Binding="{Binding ModuleCode}"/>
-                <DataGridTextColumn x:Name="moduleLecturer" Header="Lecturer" IsReadOnly="True" Width="*" Binding="{Binding LecturerName}"/>
                 <DataGridTextColumn x:Name="moduleName" Header="Name" IsReadOnly="True" Width="*" Binding="{Binding ModuleName}"/>
                 <DataGridTextColumn x:Name="moduleCredits" Header="Credits" IsReadOnly="True" Width="*" Binding="{Binding ModuleCredits}"/>
-                <DataGridTextColumn x:Name="moduleSelfStudyHours" Header="Study Hours Left" IsReadOnly="True" Width="*" Binding="{Binding ModuleSelfStudyHours}"/>
+                <DataGridTextColumn x:Name="moduleSelfStudyHours" Header="Study Hours Total" IsReadOnly="True" Width="*" Binding="{Binding ModuleSelfStudyHours}"/>
+                <DataGridTextColumn x:Name="moduleSelfStudyHoursRemaining" Header="Study Hours Left" IsReadOnly="True" Width="*" Binding="{Binding ModuleSelfStudyHoursRemaining}"/>
             </DataGrid.Columns>
         </DataGrid>
 

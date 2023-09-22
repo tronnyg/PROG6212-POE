@@ -1,6 +1,7 @@
 ﻿using ST10047403_PROG6212_POE_Class_Library;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,15 +27,36 @@ namespace Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Modules
         public ModuleList()
         {
             InitializeComponent();
-
             ModuleListDatagrid.ItemsSource = CurrentUser.currentUser.Modules1;
-
-            
         }
 
-        public static implicit operator ModuleList(SessionsList v)
+        private void AddModuleButton_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            ModuleListDatagrid.ItemsSource = null;
+            ModuleListDatagrid.ItemsSource = CurrentUser.currentUser.Modules1;
+            if (SemesterWeeksComboBox.Items.Count == 0)
+            {
+                for (int i = 0; i < CurrentUser.numWeeks; i++)
+                {
+                    SemesterWeeksComboBox.Items.Add("Week " + (i + 1));
+                }
+            }
+        }
+
+        private void SemesterWeeksComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {   
+            if (CurrentUser.currentUser.Sessions1.Count != 0)
+            {
+                Updates.updateModuleData(CurrentUser.currentUser,(SemesterWeeksComboBox.SelectedIndex+1));
+                ModuleListDatagrid.ItemsSource = null;
+                ModuleListDatagrid.ItemsSource = CurrentUser.currentUser.Modules1;
+            }
+
         }
     }
 }

@@ -4,18 +4,35 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Main.Sessions"
+             xmlns:viewModel="clr-namespace:Yugen_Naidoo_ST10047403_PROG6212_POE_PART_1.Core" d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="AddSessionButton" Content="ADD SESSION" Click="AddSessionButton_Click" HorizontalAlignment="Right" Width="150" Height="30" FontSize="20" Margin="0,10,10,0" Command="{Binding SwitchToAddSessionsCommand}"/>
         <!--SESSIONS DATAGRID-->
-        <DataGrid x:Name="SessionsListDatagrid" SelectionMode="Extended" SelectionUnit="FullRow" Style="{StaticResource DataGridStyle1}">
+        <DataGrid x:Name="SessionsListDatagrid" SelectionMode="Extended" SelectionUnit="FullRow" Style="{StaticResource DataGridStyle1}" Margin="10 0 10 0">
+            <DataGrid.CellStyle>
+                <StaticResource ResourceKey="DataGridCellStyle1"/>
+            </DataGrid.CellStyle>
+            <DataGrid.RowStyle>
+                <StaticResource ResourceKey="DataGridRowStyle1"/>
+            </DataGrid.RowStyle>
+            <DataGrid.ColumnHeaderStyle> 
+                <StaticResource ResourceKey="DataGridColumnHeaderStyle1"/>
+            </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="50"/>
-                <DataGridTextColumn x:Name="moduleCode" Header="Code" IsReadOnly="True" Width="*"/>
-                <DataGridTextColumn x:Name="moduleName" Header="Name" IsReadOnly="True" Width="*"/>
-                <DataGridTextColumn x:Name="moduleLecturer" Header="Lecturer" IsReadOnly="True" Width="*"/>
-                <DataGridTextColumn x:Name="moduleCredits" Header="Credits" IsReadOnly="True" Width="*"/>
+                <DataGridTextColumn x:Name="SessionName" Header="Name" IsReadOnly="True" Width="*" Binding="{Binding SessionName}"/>
+                <DataGridTextColumn x:Name="sessionModule" Header="Module" IsReadOnly="True" Width="*" Binding="{Binding SessionModule}"/>
+                <DataGridTextColumn x:Name="sessionDate" Header="Date" IsReadOnly="True" Width="*" Binding="{Binding SessionDate}"/>
+                <DataGridTextColumn x:Name="sessionWeek" Header="Week" IsReadOnly="True" Width="*" Binding="{Binding SessionWeek}"/>
+                <DataGridTextColumn x:Name="sessionlength" Header="Time(min)" IsReadOnly="True" Width="*" Binding="{Binding SessionMinutes}"/>
             </DataGrid.Columns>
         </DataGrid>
         

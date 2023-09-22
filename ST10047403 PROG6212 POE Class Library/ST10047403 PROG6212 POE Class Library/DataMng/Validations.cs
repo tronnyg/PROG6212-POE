@@ -23,5 +23,41 @@ namespace ST10047403_PROG6212_POE_Class_Library
         {
             return errorMessage[input];
         }
+
+        public bool isBlank(string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
+        }
+
+        public bool isAnInt(string input)
+        {
+            return int.TryParse(input,out int value);
+        }
+
+        public bool isADouble(string input)
+        {
+            return double.TryParse(input,out double value);
+        }
+
+        public bool isDateInFuture(DateTime input)
+        {
+            if (input > DateTime.Now)
+            { return true; }
+            else { return false; }
+        }
+
+        public bool isDateInPast(DateTime input)
+        {
+            if (input < DateTime.Now)
+            { return true; }
+            else { return false; }
+        }
+
+        public bool isDateInBetween(DateTime input, DateTime startDate, DateTime endDate)
+        {
+            return input >= startDate && input <= endDate;
+        }
+
     }
 }
+//======================================== END ========================================//
